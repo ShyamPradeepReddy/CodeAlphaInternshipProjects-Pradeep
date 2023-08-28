@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Page Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page1">
+      <form id="form1">
+        <h3>Code Alpha Survey Form</h3>
+        <label for="name" class="label">Enter Name : </label>
+        <input type="text" placeholder="Name" name="name" id="name" /><br />
+        <label for="fname" class="label">Father Name : </label>
+        <input
+          type="text"
+          name="fname"
+          placeholder="Father name"
+          id="fname"
+        /><br />
+        <label for="mname">Mother Name : </label>
+        <input
+          type="text"
+          name="mname"
+          placeholder="Mother name"
+          id="mname"
+        /><br />
+        <label for="email">Enter the Email</label>
+        <input type="email" name="email" placeholder="Email" id="email" /><br />
+        <label for="age" class="label">Enter the Age: </label>
+        <input type="number" name="age" placeholder="Age" id="age" /><br />
+        <div class="but">
+          <button type="button" id="Next1">Next</button>
+        </div>
+      </form>
+
+      <form id="form2">
+        <h3>Code Alpha Survey Form</h3>
+        <label for="name" class="label">Date of birth : </label>
+        <input type="date" name="dob" id="dob" />
+        <label for="dep" class="label">Department : </label>
+        <select name="dep" id="dep">
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+          <option value="CIVIL">CIVIL</option>
+          <option value="MECH">MECH</option>
+          <option value="AIML">AIML</option></select
+        ><br />
+        <label for="gender" class="label">Gender : </label><br />
+        <input type="radio" name="gender" id="male" value="male" />Male<br />
+        <input
+          type="radio"
+          name="gender"
+          id="female"
+          value="female"
+        />Female<br />
+        <label for="adress">Address : </label>
+        <textarea
+          name="address"
+          id="address"
+          cols="30"
+          rows="5"
+          placeholder="Address"
+        ></textarea>
+        <button type="button" id="Back1">Back</button>
+        <button type="button" id="Next2">Next</button>
+      </form>
+      <form id="form3">
+        <h3>Code Alpha Survey Form</h3>
+        <label for="pin" class="label">Enter Pincode : </label>
+        <input type="number" name="pin" id="pin" placeholder="Pincode" /><br />
+        <label for="pn" class="label">Phone Number : </label>
+        <input
+          type="number"
+          name="pn"
+          id="pn"
+          placeholder="Phone Number"
+        /><br />
+        <label for="language" class="label">Languages Known : </label>
+        <input type="checkbox" name="telugu" id="telugu" value="english" />
+        <label for="Telugu">Telugu</label><br />
+        <input type="checkbox" name="hindi" id="hindi" value="hindi" />
+        <label for="hindi"> Hindi</label><br />
+        <input type="checkbox" name="english" id="english" value="english" />
+        <label for="English">English</label><br />
+        <input type="checkbox" name="tamil" id="tamil" value="tamil" />
+        <label for="Tamil">Tamil</label><br />
+        <input
+          type="checkbox"
+          name="malayalam"
+          id="malayalam"
+          value="malayalam"
+        />
+        <label for="Malayalam">Malayalam</label><br />
+        <input type="checkbox" name="others" id="others" value="others" />
+        <label for="Others">Others</label><br />
+        <button type="button" id="Back2">Back</button>
+        <button type="button" id="submit" onclick="SendMail()">Submit</button>
+      </form>
+      <div class="step-row">
+        <div id="progress"></div>
+        <div class="step-col"><small>Step 1</small></div>
+        <div class="step-col"><small>Step 2</small></div>
+        <div class="step-col"><small>Step 3</small></div>
+      </div>
+    </div>
+    <script src="javascript.js"></script>
+    <script src="server.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("8T3UOj8x4QfAZm-xL");
+      })();
+    </script>
+  </body>
+</html>
